@@ -7,11 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 #[Fillable([
     'branch_name',
+    'branch_code',
+    'branch_type',
     'branch_location',
     'ambassador_name',
     'ambassador_phone',
     'backup_name',
     'backup_phone',
+    'backup_username',
     'manager_name',
     'manager_phone',
     'assistant_name',
@@ -19,6 +22,7 @@ use Illuminate\Database\Eloquent\Model;
     'display_tv_ip',
     'kaspersky_server_ip',
     'working_computers',
+    'created_by',
 ])]
 class Branch extends Model
 {
