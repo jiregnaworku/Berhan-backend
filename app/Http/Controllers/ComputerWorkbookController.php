@@ -31,6 +31,11 @@ class ComputerWorkbookController extends Controller
             $request->user()->role === 'service-desk-manager',
         );
 
+        if (isset($data['endpoint'])) {
+            $data['endpoint_protection'] = $data['endpoint'];
+            unset($data['endpoint']);
+        }
+
         $row = ComputerWorkbook::create([
             ...$data,
             'created_by' => $request->user()->username,
@@ -47,6 +52,11 @@ class ComputerWorkbookController extends Controller
 
         $data = $this->validatedData($request);
         $branch = $this->ownedBranch($request, $data['branch_id'], $request->user()->role === 'service-desk-manager');
+        if (isset($data['endpoint'])) {
+            $data['endpoint_protection'] = $data['endpoint'];
+            unset($data['endpoint']);
+        }
+
         $computerWorkbook->update([
             ...$data,
             'ambassador_name' => $data['ambassador_name'] ?? $branch->ambassador_name,
@@ -74,6 +84,12 @@ class ComputerWorkbookController extends Controller
             'computer_job' => ['nullable', 'in:MTO,Normal'],
             'operating_system' => ['required', 'in:Windows 10,Windows 11'],
             'status' => ['required', 'in:Active,Not active'],
+            'network_agent' => ['nullable', 'string', 'max:60'],
+            'endpoint_protection' => ['nullable', 'string', 'max:60'],
+            'endpoint' => ['nullable', 'string', 'max:60'],
+            'kaspersky_status' => ['nullable', 'in:Updated,Not updated'],
+            'managed_kasp_ip' => ['nullable', 'string', 'max:60'],
+            'remark' => ['nullable', 'string', 'max:255'],
         ]);
     }
 

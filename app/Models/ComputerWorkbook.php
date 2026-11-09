@@ -18,8 +18,20 @@ use Illuminate\Database\Eloquent\Model;
     'status',
     'network_agent',
     'endpoint_protection',
+    'kaspersky_status',
     'remark',
 ])]
 class ComputerWorkbook extends Model
 {
+    protected $appends = ['endpoint'];
+
+    public function getEndpointAttribute(): ?string
+    {
+        return $this->endpoint_protection;
+    }
+
+    public function setEndpointAttribute(?string $value): void
+    {
+        $this->attributes['endpoint_protection'] = $value;
+    }
 }

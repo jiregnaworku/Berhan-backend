@@ -34,12 +34,37 @@ class NetworkRegistrationController extends Controller
 
     public function store(Request $request): JsonResponse
     {
-        $registration = NetworkRegistration::create([
-            ...$this->validatedData($request),
-            'created_by' => $request->user()->username,
-        ]);
+        $validated = $this->validatedData($request);
 
-        return response()->json(['registration' => $registration], 201);
+        $branchNames = $request->input('branch_names', []);
+        if (empty($branchNames) && !empty($validated['branch_name'])) {
+            $branchNames = [$validated['branch_name']];
+        }
+
+        if (empty($branchNames)) {
+            return response()->json(['message' => 'Please select at least one branch.'], 422);
+        }
+
+        $records = [];
+        foreach ($branchNames as $branchName) {
+            $records[] = NetworkRegistration::create([
+                'branch_name' => $branchName,
+                'reason' => $validated['reason'],
+                'remark' => $validated['remark'] ?? null,
+                'ethio_telecom_side' => $validated['ethio_telecom_side'] ?? null,
+                'ethio_telecom_frequency' => $validated['ethio_telecom_frequency'] ?? null,
+                'elpha_side' => $validated['elpha_side'] ?? null,
+                'elpha_frequency' => $validated['elpha_frequency'] ?? null,
+                'incident_date' => $validated['incident_date'],
+                'created_by' => $request->user()->username,
+            ]);
+        }
+
+        return response()->json([
+            'registration' => $records[0],
+            'registrations' => $records,
+            'count' => count($records),
+        ], 201);
     }
 
     public function export(Request $request): BinaryFileResponse
@@ -254,7 +279,9 @@ class NetworkRegistrationController extends Controller
     private function validatedData(Request $request): array
     {
         return $request->validate([
-            'branch_name' => ['required', 'string', 'max:120'],
+            'branch_name' => ['nullable', 'string', 'max:120'],
+            'branch_names' => ['nullable', 'array'],
+            'branch_names.*' => ['string', 'max:120'],
             'reason' => ['required', 'in:ELPA,Ethio Telecom'],
             'remark' => ['nullable', 'string', 'max:2000'],
             'ethio_telecom_side' => ['nullable', 'string', 'max:120'],
