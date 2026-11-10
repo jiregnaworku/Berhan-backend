@@ -3,20 +3,30 @@
 namespace App\Http\Controllers;
 
 use App\Models\ItRelatedInfo;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class ItRelatedInfoController extends Controller
 {
-    public function index(): JsonResponse
+    public function index(Request $request): JsonResponse
     {
-        return response()->json([
-            'itRelatedInfos' => ItRelatedInfo::query()
-                ->with('members')
-                ->where('entry_type', 'category')
-                ->orderBy('title')
-                ->get(),
-        ]);
+        $query = ItRelatedInfo::query()
+            ->where('entry_type', 'category')
+            ->orderBy('title');
+
+        // Branch managers only get the team (category) details. Member names and
+        // phones are never loaded or sent; `members` is returned as an empty list
+        // so the frontend keeps working.
+        if ($request->user()?->role === 'branch-manager') {
+            $infos = $query->get()->each(
+                fn (ItRelatedInfo $category) => $category->setRelation('members', new Collection())
+            );
+        } else {
+            $infos = $query->with('members')->get();
+        }
+
+        return response()->json(['itRelatedInfos' => $infos]);
     }
 
     public function store(Request $request): JsonResponse

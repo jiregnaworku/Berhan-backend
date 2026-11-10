@@ -30,6 +30,7 @@ class Branch extends Model
     {
         return [
             'working_computers' => 'integer',
+            'manager_can_edit' => 'boolean',
         ];
     }
 }

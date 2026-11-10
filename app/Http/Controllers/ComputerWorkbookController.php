@@ -11,10 +11,14 @@ class ComputerWorkbookController extends Controller
 {
     public function index(Request $request): JsonResponse
     {
+        $user = $request->user();
         $query = ComputerWorkbook::query()->latest();
 
-        if ($request->user()->role === 'ambassador') {
-            $query->where('created_by', $request->user()->username);
+        if ($user->role === 'ambassador') {
+            $query->where('created_by', $user->username);
+        } elseif ($user->role === 'branch-manager') {
+            // A branch manager only receives the computers of their own branch.
+            $query->where('branch_id', $user->branch_id);
         }
 
         return response()->json(['workbookRows' => $query->get()]);
@@ -60,6 +64,40 @@ class ComputerWorkbookController extends Controller
         $computerWorkbook->update([
             ...$data,
             'ambassador_name' => $data['ambassador_name'] ?? $branch->ambassador_name,
+        ]);
+
+        return response()->json(['workbookRow' => $computerWorkbook->fresh()]);
+    }
+
+    // Branch managers can update ONLY the Net Agent and Endpoint values of a
+    // computer in their own branch, and only while the ambassador has turned
+    // editing on for that branch.
+    public function updateKaspersky(Request $request, ComputerWorkbook $computerWorkbook): JsonResponse
+    {
+        $user = $request->user();
+
+        abort_unless($user?->role === 'branch-manager', 403, 'Only branch managers can use this action.');
+        abort_unless(
+            (int) $computerWorkbook->branch_id === (int) $user->branch_id,
+            403,
+            'You can only update computers of your own branch.',
+        );
+
+        $branch = Branch::query()->findOrFail($computerWorkbook->branch_id);
+        abort_unless(
+            $branch->manager_can_edit,
+            403,
+            'Editing is not enabled for your branch. Please ask your ambassador to turn it on.',
+        );
+
+        $data = $request->validate([
+            'network_agent' => ['nullable', 'string', 'max:60'],
+            'endpoint' => ['nullable', 'string', 'max:60'],
+        ]);
+
+        $computerWorkbook->update([
+            'network_agent' => $data['network_agent'] ?? null,
+            'endpoint_protection' => $data['endpoint'] ?? null,
         ]);
 
         return response()->json(['workbookRow' => $computerWorkbook->fresh()]);

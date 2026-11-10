@@ -13,7 +13,31 @@ class BranchController extends Controller
 {
     public function index(Request $request): JsonResponse
     {
-        return response()->json(['branches' => Branch::query()->latest()->get()]);
+        $user = $request->user();
+        $branches = Branch::query()->latest()->get();
+
+        // A branch manager sees their own branch in full. For every other branch,
+        // the ambassador, backup ambassador, Kaspersky server IP and Display TV IP
+        // are removed from the response; all other fields stay visible.
+        if ($user?->role === 'branch-manager') {
+            $branches->each(function (Branch $branch) use ($user) {
+                if ((int) $branch->id !== (int) $user->branch_id) {
+                    $branch->makeHidden([
+                        'ambassador_name',
+                        'ambassador_phone',
+                        'backup_name',
+                        'backup_phone',
+                        'backup_username',
+                        'kaspersky_server_ip',
+                        'display_tv_ip',
+                        'manager_can_edit',
+                        'created_by',
+                    ]);
+                }
+            });
+        }
+
+        return response()->json(['branches' => $branches]);
     }
 
     public function store(Request $request): JsonResponse
@@ -81,6 +105,21 @@ class BranchController extends Controller
         $branch->delete();
 
         return response()->json(['message' => 'Branch deleted successfully.']);
+    }
+
+    // Turns on/off the branch manager's permission to update the Kaspersky
+    // Net Agent and Endpoint details of this branch's computers.
+    public function setManagerEdit(Request $request, Branch $branch): JsonResponse
+    {
+        $this->ensureCanManage($request);
+        $this->ensureOwnerOrManager($request, $branch);
+
+        $data = $request->validate(['enabled' => ['required', 'boolean']]);
+
+        $branch->manager_can_edit = $data['enabled'];
+        $branch->save();
+
+        return response()->json(['branch' => $branch->fresh()]);
     }
 
     private function validatedData(Request $request, ?Branch $branch = null): array
