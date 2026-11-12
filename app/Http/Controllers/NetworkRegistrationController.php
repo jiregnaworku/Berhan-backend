@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Branch;
 use App\Models\NetworkRegistration;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -45,6 +46,19 @@ class NetworkRegistrationController extends Controller
             return response()->json(['message' => 'Please select at least one branch.'], 422);
         }
 
+        // An ambassador can only register outages for the branches they own.
+        $user = $request->user();
+        if ($user?->role === 'ambassador') {
+            $ownBranches = Branch::query()
+                ->where('created_by', $user->username)
+                ->pluck('branch_name')
+                ->all();
+
+            if (array_diff($branchNames, $ownBranches)) {
+                return response()->json(['message' => 'You can only register outages for your own branches.'], 403);
+            }
+        }
+
         $records = [];
         foreach ($branchNames as $branchName) {
             $records[] = NetworkRegistration::create([
@@ -65,6 +79,29 @@ class NetworkRegistrationController extends Controller
             'registrations' => $records,
             'count' => count($records),
         ], 201);
+    }
+
+    public function update(Request $request, NetworkRegistration $networkRegistration): JsonResponse
+    {
+        $this->ensureCanChange($request, $networkRegistration);
+
+        // The branch of a report never changes; only its details can be edited.
+        $data = collect($this->validatedData($request))
+            ->except(['branch_name', 'branch_names'])
+            ->all();
+
+        $networkRegistration->update($data);
+
+        return response()->json(['registration' => $networkRegistration->fresh()]);
+    }
+
+    public function destroy(Request $request, NetworkRegistration $networkRegistration): JsonResponse
+    {
+        $this->ensureCanChange($request, $networkRegistration);
+
+        $networkRegistration->delete();
+
+        return response()->json(['message' => 'Outage report deleted.']);
     }
 
     public function export(Request $request): BinaryFileResponse
@@ -134,6 +171,18 @@ class NetworkRegistrationController extends Controller
             sprintf('%s_%s_Network_Report.pdf', trim($ambassadorName, '_'), $monthDate->format('F_Y')),
             ['Content-Type' => 'application/pdf'],
         )->deleteFileAfterSend(true);
+    }
+
+    // An ambassador may change only the reports they registered;
+    // the service desk manager may change any report.
+    private function ensureCanChange(Request $request, NetworkRegistration $registration): void
+    {
+        $user = $request->user();
+
+        $allowed = $user?->role === 'service-desk-manager'
+            || ($user?->role === 'ambassador' && $registration->created_by === $user->username);
+
+        abort_unless($allowed, 403, 'You can only change outage reports that you registered.');
     }
 
     private function networkPdf(\DateTimeImmutable $monthDate, string $ambassador, array $rows): string

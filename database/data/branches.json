@@ -1,0 +1,1698 @@
+[
+ {
+  "code": "001",
+  "name": "BOLE BRANCH"
+ },
+ {
+  "code": "002",
+  "name": "HAYAHULET MAZORIA BRANCH"
+ },
+ {
+  "code": "003",
+  "name": "AMEDE GEBEYA BRANCH"
+ },
+ {
+  "code": "004",
+  "name": "KALITY BRANCH"
+ },
+ {
+  "code": "005",
+  "name": "GENET BRANCH"
+ },
+ {
+  "code": "006",
+  "name": "HAWASSA BRANCH"
+ },
+ {
+  "code": "007",
+  "name": "BAHRDAR BRANCH"
+ },
+ {
+  "code": "008",
+  "name": "ADAMA BRANCH"
+ },
+ {
+  "code": "009",
+  "name": "LEGEHAR BRANCH"
+ },
+ {
+  "code": "010",
+  "name": "HOSSANA BRANCH"
+ },
+ {
+  "code": "011",
+  "name": "MEGENAGNA BRANCH"
+ },
+ {
+  "code": "012",
+  "name": "GONDER BRANCH"
+ },
+ {
+  "code": "013",
+  "name": "DIR TERA BRANCH"
+ },
+ {
+  "code": "014",
+  "name": "DESSIE BRANCH"
+ },
+ {
+  "code": "015",
+  "name": "MEKELLE BRANCH"
+ },
+ {
+  "code": "016",
+  "name": "MESHUALKIA BRANCH"
+ },
+ {
+  "code": "017",
+  "name": "SHASHEMENE BRANCH"
+ },
+ {
+  "code": "018",
+  "name": "BISHOFTU BRANCH"
+ },
+ {
+  "code": "019",
+  "name": "ALEMGENA BRANCH"
+ },
+ {
+  "code": "020",
+  "name": "JIMMA BRANCH"
+ },
+ {
+  "code": "021",
+  "name": "TEKLEHAIMANOT BRANCH"
+ },
+ {
+  "code": "022",
+  "name": "KERA BRANCH"
+ },
+ {
+  "code": "023",
+  "name": "SARIS GUMURUK BRANCH"
+ },
+ {
+  "code": "024",
+  "name": "WOLAITA BRANCH"
+ },
+ {
+  "code": "025",
+  "name": "ARBAMINCH BRANCH"
+ },
+ {
+  "code": "026",
+  "name": "WOLOSEFER BRANCH"
+ },
+ {
+  "code": "027",
+  "name": "MERI BRANCH"
+ },
+ {
+  "code": "028",
+  "name": "FLAMINGO BRANCH"
+ },
+ {
+  "code": "029",
+  "name": "MIZAN TEFERI BRANCH"
+ },
+ {
+  "code": "030",
+  "name": "DEBRE MARKOS BRANCH"
+ },
+ {
+  "code": "031",
+  "name": "SHIRE ENDASILASSIE BRANCH"
+ },
+ {
+  "code": "032",
+  "name": "MESALEMIA BRANCH"
+ },
+ {
+  "code": "033",
+  "name": "JEMO BRANCH"
+ },
+ {
+  "code": "034",
+  "name": "DIRE DAWA BRANCH"
+ },
+ {
+  "code": "035",
+  "name": "GERJI MEBRAT HAIL BRANCH"
+ },
+ {
+  "code": "036",
+  "name": "LAFITO BRANCH"
+ },
+ {
+  "code": "037",
+  "name": "BOLE MEDHANIALEM BRANCH"
+ },
+ {
+  "code": "038",
+  "name": "NEKEMTE BRANCH"
+ },
+ {
+  "code": "039",
+  "name": "BETHEL BRANCH"
+ },
+ {
+  "code": "040",
+  "name": "DUKEM BRANCH"
+ },
+ {
+  "code": "041",
+  "name": "AMBO BRANCH"
+ },
+ {
+  "code": "042",
+  "name": "KOTEBE BRANCH"
+ },
+ {
+  "code": "043",
+  "name": "ADEY ABEBA BRANCH"
+ },
+ {
+  "code": "044",
+  "name": "SHASHEMENE ARADA BRANCH"
+ },
+ {
+  "code": "045",
+  "name": "AYER TENA GIRAR BRANCH"
+ },
+ {
+  "code": "046",
+  "name": "MESKEL FLOWER BRANCH"
+ },
+ {
+  "code": "047",
+  "name": "WOLETE BRANCH"
+ },
+ {
+  "code": "048",
+  "name": "WOLISO BRANCH"
+ },
+ {
+  "code": "049",
+  "name": "EMPEROR TEWODROS BRANCH"
+ },
+ {
+  "code": "050",
+  "name": "ASSOSA BRANCH"
+ },
+ {
+  "code": "051",
+  "name": "ARAB SEFER BRANCH"
+ },
+ {
+  "code": "052",
+  "name": "GULLELE BRANCH"
+ },
+ {
+  "code": "053",
+  "name": "GAMBELLA BRANCH"
+ },
+ {
+  "code": "054",
+  "name": "HUMERA BRANCH"
+ },
+ {
+  "code": "055",
+  "name": "KIDEST MARIAM BRANCH"
+ },
+ {
+  "code": "056",
+  "name": "LIDETA BRANCH"
+ },
+ {
+  "code": "057",
+  "name": "PIASSA BRANCH"
+ },
+ {
+  "code": "058",
+  "name": "SIDIST KILO BRANCH"
+ },
+ {
+  "code": "059",
+  "name": "BELAY ZELEKE BRANCH"
+ },
+ {
+  "code": "060",
+  "name": "BALDERAS BRANCH"
+ },
+ {
+  "code": "061",
+  "name": "AUTOBIS TERRA BRANCH"
+ },
+ {
+  "code": "062",
+  "name": "GERJI BRANCH"
+ },
+ {
+  "code": "063",
+  "name": "BOLE MICHAEL BRANCH"
+ },
+ {
+  "code": "064",
+  "name": "KIRKOS BRANCH"
+ },
+ {
+  "code": "065",
+  "name": "MEHAL WOLLOSEFER BRANCH"
+ },
+ {
+  "code": "066",
+  "name": "AKAKI BRANCH"
+ },
+ {
+  "code": "067",
+  "name": "HAWASSA MENAHERIA BRANCH"
+ },
+ {
+  "code": "068",
+  "name": "GISHE ABAY BRANCH"
+ },
+ {
+  "code": "069",
+  "name": "ADAMA ARADA BRANCH"
+ },
+ {
+  "code": "070",
+  "name": "ADIHAKE BRANCH"
+ },
+ {
+  "code": "071",
+  "name": "JIGJIGA BRANCH"
+ },
+ {
+  "code": "072",
+  "name": "TORBEN GERBE BRANCH"
+ },
+ {
+  "code": "073",
+  "name": "GOTERA BRANCH"
+ },
+ {
+  "code": "074",
+  "name": "DEBRE BERHAN BRANCH"
+ },
+ {
+  "code": "075",
+  "name": "KEBENA BRANCH"
+ },
+ {
+  "code": "076",
+  "name": "GOJAM BERENDA BRANCH"
+ },
+ {
+  "code": "077",
+  "name": "YERER BER BRANCH"
+ },
+ {
+  "code": "078",
+  "name": "SEBETA BRANCH"
+ },
+ {
+  "code": "079",
+  "name": "ENKULAL FABRICA BRANCH"
+ },
+ {
+  "code": "080",
+  "name": "HANNA MARIAM BRANCH"
+ },
+ {
+  "code": "081",
+  "name": "DEMBIDOLLO BRANCH"
+ },
+ {
+  "code": "082",
+  "name": "GURD SHOLA BRANCH"
+ },
+ {
+  "code": "083",
+  "name": "SHIROMEDA BRANCH"
+ },
+ {
+  "code": "084",
+  "name": "LEBU BRANCH"
+ },
+ {
+  "code": "085",
+  "name": "SHINSHICHO BRANCH"
+ },
+ {
+  "code": "086",
+  "name": "ASSELA BRANCH"
+ },
+ {
+  "code": "087",
+  "name": "GEFERSA NONO BRANCH"
+ },
+ {
+  "code": "088",
+  "name": "MEHAL ADAMA BRANCH"
+ },
+ {
+  "code": "089",
+  "name": "SEMIT CONDOMINIUM BRANCH"
+ },
+ {
+  "code": "090",
+  "name": "SHASHEMENE AWASHO BRANCH"
+ },
+ {
+  "code": "091",
+  "name": "AIRPORT BRANCH"
+ },
+ {
+  "code": "092",
+  "name": "ADDISU GEBEYA"
+ },
+ {
+  "code": "093",
+  "name": "BOLE BULBULA"
+ },
+ {
+  "code": "094",
+  "name": "SHALA SUB BRANCH"
+ },
+ {
+  "code": "095",
+  "name": "BENSSA DAYE BRANCH"
+ },
+ {
+  "code": "096",
+  "name": "SEFERE SELAM BRANCH"
+ },
+ {
+  "code": "097",
+  "name": "OLD AIR PORT BRANCH"
+ },
+ {
+  "code": "098",
+  "name": "DURAME BRANCH"
+ },
+ {
+  "code": "099",
+  "name": "FURRY BRANCH"
+ },
+ {
+  "code": "100",
+  "name": "WOSSEN BRANCH"
+ },
+ {
+  "code": "101",
+  "name": "JIMMA ABA JIFFAR BRANCH"
+ },
+ {
+  "code": "102",
+  "name": "HALABA KULITO BRANCH"
+ },
+ {
+  "code": "103",
+  "name": "WOLDIA BRANCH"
+ },
+ {
+  "code": "104",
+  "name": "SIM BRANCH"
+ },
+ {
+  "code": "105",
+  "name": "WORLD VISION BRANCH"
+ },
+ {
+  "code": "106",
+  "name": "ADIGRAT BRANCH"
+ },
+ {
+  "code": "107",
+  "name": "ADWA BRANCH"
+ },
+ {
+  "code": "108",
+  "name": "AXUM BRANCH"
+ },
+ {
+  "code": "109",
+  "name": "HIWOT BRANCH"
+ },
+ {
+  "code": "110",
+  "name": "WUKRO BRANCH"
+ },
+ {
+  "code": "111",
+  "name": "ALAMATA BRANCH"
+ },
+ {
+  "code": "112",
+  "name": "TOSSA BRANCH"
+ },
+ {
+  "code": "113",
+  "name": "AYAT BRANCH"
+ },
+ {
+  "code": "114",
+  "name": "HAYAHULET GEBRIEL BRANCH"
+ },
+ {
+  "code": "115",
+  "name": "BERECHA-ADAMA BRANCH"
+ },
+ {
+  "code": "116",
+  "name": "SARBET BRANCH"
+ },
+ {
+  "code": "117",
+  "name": "HABTE GEORGIES BRANCH"
+ },
+ {
+  "code": "118",
+  "name": "ALETA WONDO BRANCH"
+ },
+ {
+  "code": "119",
+  "name": "SHONE BRANCH"
+ },
+ {
+  "code": "120",
+  "name": "MODJO BRANCH"
+ },
+ {
+  "code": "121",
+  "name": "BODITI BRANCH"
+ },
+ {
+  "code": "122",
+  "name": "LEM MEGENAGNA BRANCH"
+ },
+ {
+  "code": "123",
+  "name": "KOMBOLCHA BRANCH"
+ },
+ {
+  "code": "124",
+  "name": "WUHA LIMAT BRANCH"
+ },
+ {
+  "code": "125",
+  "name": "MEKI BRANCH"
+ },
+ {
+  "code": "126",
+  "name": "DIRE DAWA SABIAN BRANCH"
+ },
+ {
+  "code": "127",
+  "name": "URAEL BRANCH"
+ },
+ {
+  "code": "128",
+  "name": "TANA BRANCH"
+ },
+ {
+  "code": "129",
+  "name": "BUTAJIRA BRANCH"
+ },
+ {
+  "code": "130",
+  "name": "LOGIA SEMERA BRANCH"
+ },
+ {
+  "code": "131",
+  "name": "SUMMIT MEDHANIYALEM BRANCH"
+ },
+ {
+  "code": "132",
+  "name": "BEKLO BET BRANCH"
+ },
+ {
+  "code": "133",
+  "name": "GIMBICHU BRANCH"
+ },
+ {
+  "code": "134",
+  "name": "GOMBORA BRANCH"
+ },
+ {
+  "code": "135",
+  "name": "SAWULA BRANCH"
+ },
+ {
+  "code": "136",
+  "name": "JINKA BRANCH"
+ },
+ {
+  "code": "137",
+  "name": "MEKANISSA BRANCH"
+ },
+ {
+  "code": "138",
+  "name": "SULULTA BRANCH"
+ },
+ {
+  "code": "139",
+  "name": "BATU BRANCH"
+ },
+ {
+  "code": "140",
+  "name": "DAWURO BRANCH"
+ },
+ {
+  "code": "141",
+  "name": "HARAR BRANCH"
+ },
+ {
+  "code": "142",
+  "name": "HOLETA BRANCH"
+ },
+ {
+  "code": "143",
+  "name": "FITCHE BRANCH"
+ },
+ {
+  "code": "144",
+  "name": "BURAYU BRANCH"
+ },
+ {
+  "code": "145",
+  "name": "KARA-ALO BRANCH"
+ },
+ {
+  "code": "146",
+  "name": "GEBRE GURACHA BRANCH"
+ },
+ {
+  "code": "147",
+  "name": "WOLKITIE BRANCH"
+ },
+ {
+  "code": "148",
+  "name": "BEKOJI BRANCH"
+ },
+ {
+  "code": "149",
+  "name": "CINIMA RAS BRANCH"
+ },
+ {
+  "code": "150",
+  "name": "BESHALE BRANCH"
+ },
+ {
+  "code": "151",
+  "name": "CMC-MICHEAL BRANCH"
+ },
+ {
+  "code": "152",
+  "name": "YEKA ABADO BRANCH"
+ },
+ {
+  "code": "153",
+  "name": "IMPERIAL BRANCH"
+ },
+ {
+  "code": "154",
+  "name": "AREKA BRANCH"
+ },
+ {
+  "code": "155",
+  "name": "TULU DIMITU BRANCH"
+ },
+ {
+  "code": "156",
+  "name": "ADDI-HAWSI BRANCH"
+ },
+ {
+  "code": "157",
+  "name": "GIMBI BRANCH"
+ },
+ {
+  "code": "158",
+  "name": "NEDJO BRANCH"
+ },
+ {
+  "code": "159",
+  "name": "HADERO BRANCH"
+ },
+ {
+  "code": "160",
+  "name": "BONGA BRANCH"
+ },
+ {
+  "code": "161",
+  "name": "OLYMPIA BRANCH"
+ },
+ {
+  "code": "162",
+  "name": "TEPPI BRANCH"
+ },
+ {
+  "code": "163",
+  "name": "BEDELE BRANCH"
+ },
+ {
+  "code": "164",
+  "name": "METTU BRANCH"
+ },
+ {
+  "code": "165",
+  "name": "ABAY-MADO BRANCH"
+ },
+ {
+  "code": "166",
+  "name": "DILLA BRANCH"
+ },
+ {
+  "code": "167",
+  "name": "ARSI-NEGELE BRANCH"
+ },
+ {
+  "code": "168",
+  "name": "MEHAL SUMMIT BRANCH"
+ },
+ {
+  "code": "169",
+  "name": "WONDO-GENET BRANCH"
+ },
+ {
+  "code": "170",
+  "name": "BULE-HORA BRANCH"
+ },
+ {
+  "code": "171",
+  "name": "CHIRO BRANCH"
+ },
+ {
+  "code": "172",
+  "name": "ENDERASSIE BRANCH"
+ },
+ {
+  "code": "173",
+  "name": "MIERAB MERKATO BRANCH"
+ },
+ {
+  "code": "174",
+  "name": "GEJA SEFER BRANCH"
+ },
+ {
+  "code": "175",
+  "name": "MERKATO HUNGNAW MERA BRANCH"
+ },
+ {
+  "code": "176",
+  "name": "MEKELLE HAWZEN ADEBABAY BRANCH"
+ },
+ {
+  "code": "177",
+  "name": "BULBULA-MARIAM MAZORIA BRANCH"
+ },
+ {
+  "code": "178",
+  "name": "NIFAS SILK BRANCH"
+ },
+ {
+  "code": "179",
+  "name": "MEGENAGNA ADEBABAY BRANCH"
+ },
+ {
+  "code": "180",
+  "name": "BALE ROBE BRANCH"
+ },
+ {
+  "code": "181",
+  "name": "GINIR BRANCH"
+ },
+ {
+  "code": "182",
+  "name": "METEHARA BRANCH"
+ },
+ {
+  "code": "183",
+  "name": "MENDI BRANCH"
+ },
+ {
+  "code": "184",
+  "name": "AYAT ZONE 3 BRANCH"
+ },
+ {
+  "code": "185",
+  "name": "LAMBERET BERANCH"
+ },
+ {
+  "code": "186",
+  "name": "SHAKISO BRANCH"
+ },
+ {
+  "code": "187",
+  "name": "ADAMA BOLE BRANCH"
+ },
+ {
+  "code": "188",
+  "name": "ATLAS BRANCH"
+ },
+ {
+  "code": "189",
+  "name": "FERENSAY-GURARA BRANCH"
+ },
+ {
+  "code": "190",
+  "name": "CHANCHO BRANCH"
+ },
+ {
+  "code": "191",
+  "name": "SIGNAL BRANCH"
+ },
+ {
+  "code": "192",
+  "name": "ALULA ABA NEGA BRANCH"
+ },
+ {
+  "code": "193",
+  "name": "BOLE ARABSA BRANCH"
+ },
+ {
+  "code": "194",
+  "name": "BISRATE GEBRIEL BRANCH"
+ },
+ {
+  "code": "195",
+  "name": "KOBO BRANCH"
+ },
+ {
+  "code": "196",
+  "name": "KASANCHIS BRANCH"
+ },
+ {
+  "code": "197",
+  "name": "MEKANISSA KORE BRANCH"
+ },
+ {
+  "code": "198",
+  "name": "ANGER-GUTE BRANCH"
+ },
+ {
+  "code": "199",
+  "name": "AYER TENA ADEBABAY BRANCH"
+ },
+ {
+  "code": "200",
+  "name": "AYAT-72"
+ },
+ {
+  "code": "201",
+  "name": "MERKATO SHERA TERA"
+ },
+ {
+  "code": "202",
+  "name": "SHOA ROBIT BRANCH"
+ },
+ {
+  "code": "203",
+  "name": "PROFESSOR BEYENE PETROS BRANCH"
+ },
+ {
+  "code": "204",
+  "name": "HAILE GARMENT BRANCH"
+ },
+ {
+  "code": "205",
+  "name": "HIRENA BRANCH"
+ },
+ {
+  "code": "206",
+  "name": "DEBRE TABOR BRANCH"
+ },
+ {
+  "code": "207",
+  "name": "BAKO BRANCH"
+ },
+ {
+  "code": "208",
+  "name": "JIGJIGA KALI BRANCH"
+ },
+ {
+  "code": "209",
+  "name": "LEBU MEBERAT HAIL BRANCH"
+ },
+ {
+  "code": "210",
+  "name": "Dollo Ado BRANCH"
+ },
+ {
+  "code": "211",
+  "name": "KOLFE ATENA-TERA"
+ },
+ {
+  "code": "212",
+  "name": "YESHI DEBELE BRANCH"
+ },
+ {
+  "code": "213",
+  "name": "ALEM BANK BRANCH"
+ },
+ {
+  "code": "214",
+  "name": "DAMBOYA BRANCH"
+ },
+ {
+  "code": "215",
+  "name": "ARBA MINCH SECHA BRANCH"
+ },
+ {
+  "code": "216",
+  "name": "GIDOLE BRANCH"
+ },
+ {
+  "code": "217",
+  "name": "NEGELE BRANCH"
+ },
+ {
+  "code": "218",
+  "name": "SIBU-SIRE BRANCH"
+ },
+ {
+  "code": "219",
+  "name": "SHAMBU BRANCH"
+ },
+ {
+  "code": "220",
+  "name": "HAILE GEBRESELASSIE HIGHWAY BRANCH"
+ },
+ {
+  "code": "221",
+  "name": "MOYALE BRANCH"
+ },
+ {
+  "code": "222",
+  "name": "ADAMA-RAS BRANCH"
+ },
+ {
+  "code": "223",
+  "name": "CHENCHA BRANCH"
+ },
+ {
+  "code": "224",
+  "name": "MEXICO BRANCH"
+ },
+ {
+  "code": "225",
+  "name": "BUIE BRANCH"
+ },
+ {
+  "code": "226",
+  "name": "GELAN CONDOMINIUM BRANCH"
+ },
+ {
+  "code": "227",
+  "name": "GORO BRANCH"
+ },
+ {
+  "code": "228",
+  "name": "SUMMIT SAFARI BRANCH"
+ },
+ {
+  "code": "229",
+  "name": "COLONEL BEZABIH PETROS ADEBABAY"
+ },
+ {
+  "code": "230",
+  "name": "ANFO BRANCH"
+ },
+ {
+  "code": "231",
+  "name": "LIDETA FIRD BET BRANCH"
+ },
+ {
+  "code": "232",
+  "name": "GUDER BRANCH"
+ },
+ {
+  "code": "233",
+  "name": "SODO MENAHARIA"
+ },
+ {
+  "code": "234",
+  "name": "SIDAMO TERA BRANCH"
+ },
+ {
+  "code": "235",
+  "name": "MEKANISA ABO BRANCH"
+ },
+ {
+  "code": "236",
+  "name": "SEKORU"
+ },
+ {
+  "code": "237",
+  "name": "WERETA"
+ },
+ {
+  "code": "238",
+  "name": "YIRGALEM BRANCH"
+ },
+ {
+  "code": "239",
+  "name": "DOYOGENA BRANCH"
+ },
+ {
+  "code": "240",
+  "name": "MERSA BRANCH"
+ },
+ {
+  "code": "241",
+  "name": "Bulbula 93 Mazorya"
+ },
+ {
+  "code": "242",
+  "name": "BISHOFTU TOURIST BRANCH"
+ },
+ {
+  "code": "243",
+  "name": "ADAMA BOKU BRANCH"
+ },
+ {
+  "code": "244",
+  "name": "JEMO MICHAEL BRANCH"
+ },
+ {
+  "code": "245",
+  "name": "GINCHI BRANCH"
+ },
+ {
+  "code": "246",
+  "name": "METTI BRANCH"
+ },
+ {
+  "code": "247",
+  "name": "ARAT KILO"
+ },
+ {
+  "code": "248",
+  "name": "AKAKI ALEM BANK BRANCH"
+ },
+ {
+  "code": "249",
+  "name": "MEHAL GERJI BRANCH"
+ },
+ {
+  "code": "250",
+  "name": "Sebategna Branch"
+ },
+ {
+  "code": "251",
+  "name": "INJIBARA BRANCH"
+ },
+ {
+  "code": "252",
+  "name": "DANGLA BRANCH"
+ },
+ {
+  "code": "253",
+  "name": "ADAMA BOSSET"
+ },
+ {
+  "code": "254",
+  "name": "KERA GOFA MAZORYA BRANCH"
+ },
+ {
+  "code": "255",
+  "name": "HAWASSA ATOTE BRANCH"
+ },
+ {
+  "code": "256",
+  "name": "LEGETAFO BRANCH"
+ },
+ {
+  "code": "257",
+  "name": "MEHAL HAYAHULET BRANCH"
+ },
+ {
+  "code": "258",
+  "name": "GERJIUNITY BRANCH"
+ },
+ {
+  "code": "259",
+  "name": "ALETA CHUKO BRANCH"
+ },
+ {
+  "code": "260",
+  "name": "HAYAHULET ADDIS HIWOT BRANCH"
+ },
+ {
+  "code": "261",
+  "name": "JEMO 2 BRANCH"
+ },
+ {
+  "code": "262",
+  "name": "ARERTI BRANCH"
+ },
+ {
+  "code": "263",
+  "name": "ALFA BRANCH"
+ },
+ {
+  "code": "264",
+  "name": "BOLE-HAYARAT"
+ },
+ {
+  "code": "265",
+  "name": "SUMMIT 72"
+ },
+ {
+  "code": "266",
+  "name": "GOFAADEBABAY BRANCH"
+ },
+ {
+  "code": "267",
+  "name": "SEMIEN HOTEL BRANCH"
+ },
+ {
+  "code": "268",
+  "name": "ADEY-ABEBA STADIUM BRANCH"
+ },
+ {
+  "code": "269",
+  "name": "DAGMAWI MENELIK BRANCH"
+ },
+ {
+  "code": "270",
+  "name": "SHANTO BRANCH"
+ },
+ {
+  "code": "271",
+  "name": "DIMTU BRANCH"
+ },
+ {
+  "code": "272",
+  "name": "GUNUNO BRANCH"
+ },
+ {
+  "code": "273",
+  "name": "GESUBA BRANCH"
+ },
+ {
+  "code": "274",
+  "name": "FINOTE SELAM BRANCH"
+ },
+ {
+  "code": "275",
+  "name": "CHUKALA BRANCH"
+ },
+ {
+  "code": "276",
+  "name": "GARAGODO BRANCH"
+ },
+ {
+  "code": "277",
+  "name": "KOTEBE COLLEGE BRANCH"
+ },
+ {
+  "code": "278",
+  "name": "HUMBO BRANCH"
+ },
+ {
+  "code": "279",
+  "name": "BIRBIR BRANCH"
+ },
+ {
+  "code": "280",
+  "name": "BEKLOSEGNO BRANCH"
+ },
+ {
+  "code": "281",
+  "name": "BELE AWASSA BRANCH"
+ },
+ {
+  "code": "282",
+  "name": "BABILLE BRANCH"
+ },
+ {
+  "code": "283",
+  "name": "CHAGNI BRANCH"
+ },
+ {
+  "code": "284",
+  "name": "BURIE BRANCH"
+ },
+ {
+  "code": "285",
+  "name": "AGARO BRANCH"
+ },
+ {
+  "code": "286",
+  "name": "MIZANAMAN BRANCH"
+ },
+ {
+  "code": "287",
+  "name": "SEBARA BABUR BRANCH"
+ },
+ {
+  "code": "288",
+  "name": "GONDAR MARAKI BRANCH"
+ },
+ {
+  "code": "289",
+  "name": "BICHENA BRANCH"
+ },
+ {
+  "code": "290",
+  "name": "QETTEERRO BRANCH"
+ },
+ {
+  "code": "291",
+  "name": "SHEGOLE BRANCH"
+ },
+ {
+  "code": "292",
+  "name": "SHENO BRANCH"
+ },
+ {
+  "code": "293",
+  "name": "SAGURE BRANCH"
+ },
+ {
+  "code": "294",
+  "name": "ITEYA BRANCH"
+ },
+ {
+  "code": "295",
+  "name": "SHAFFETA BRANCH"
+ },
+ {
+  "code": "296",
+  "name": "AWASH SEBAT KILO BRANCH"
+ },
+ {
+  "code": "297",
+  "name": "ATSE-ZERAYAKOB BRANCH"
+ },
+ {
+  "code": "298",
+  "name": "SHOLLAGEBEYA BRANCH"
+ },
+ {
+  "code": "299",
+  "name": "GEFERSA GUJE BRANCH"
+ },
+ {
+  "code": "300",
+  "name": "LEKU BRANCH"
+ },
+ {
+  "code": "301",
+  "name": "MELOKOZA BRANCH"
+ },
+ {
+  "code": "302",
+  "name": "HOMECHO BRANCH"
+ },
+ {
+  "code": "303",
+  "name": "LEKA BRANCH"
+ },
+ {
+  "code": "304",
+  "name": "GARMENT SEFERA"
+ },
+ {
+  "code": "305",
+  "name": "DARAKEBADO BRANCH"
+ },
+ {
+  "code": "306",
+  "name": "DODOLA BRANCH"
+ },
+ {
+  "code": "307",
+  "name": "AYAT-49"
+ },
+ {
+  "code": "308",
+  "name": "ANGECHA BRANCH"
+ },
+ {
+  "code": "309",
+  "name": "LAKOMELZA BRANCH"
+ },
+ {
+  "code": "310",
+  "name": "BALE GOBA BRANCH"
+ },
+ {
+  "code": "311",
+  "name": "COCA MAZORIA BRANCH"
+ },
+ {
+  "code": "312",
+  "name": "ABAKORAN BRANCH"
+ },
+ {
+  "code": "313",
+  "name": "JEMO ADEBABAY BRANCH"
+ },
+ {
+  "code": "314",
+  "name": "SARIS 58 BRANCH"
+ },
+ {
+  "code": "315",
+  "name": "EUROPEAN UNION BRANCH"
+ },
+ {
+  "code": "316",
+  "name": "GORO SEFERA BRANCH"
+ },
+ {
+  "code": "317",
+  "name": "GARMENT MESKELEGNA BRANCH"
+ },
+ {
+  "code": "318",
+  "name": "SHUFUNE BRANCH"
+ },
+ {
+  "code": "319",
+  "name": "KETTA BRANCH"
+ },
+ {
+  "code": "320",
+  "name": "EJERE BRANCH"
+ },
+ {
+  "code": "321",
+  "name": "MUKE-TURI BRANCH"
+ },
+ {
+  "code": "322",
+  "name": "BAHIL ADARASH BRANCH"
+ },
+ {
+  "code": "323",
+  "name": "DATO BRANCH"
+ },
+ {
+  "code": "324",
+  "name": "WADU BRANCH"
+ },
+ {
+  "code": "325",
+  "name": "AZEZO BRANCH"
+ },
+ {
+  "code": "326",
+  "name": "TULU BOLO BRANCH"
+ },
+ {
+  "code": "327",
+  "name": "SARIS BRANCH"
+ },
+ {
+  "code": "328",
+  "name": "DIRE DAWA MESKELEGNA BRANCH"
+ },
+ {
+  "code": "329",
+  "name": "AGENNA BRANCH"
+ },
+ {
+  "code": "330",
+  "name": "AFRICA HIBRET BRANCH"
+ },
+ {
+  "code": "331",
+  "name": "BONOSHA BRANCH"
+ },
+ {
+  "code": "332",
+  "name": "SUMMIT BRANCH"
+ },
+ {
+  "code": "333",
+  "name": "KARA KORE BRANCH"
+ },
+ {
+  "code": "334",
+  "name": "GOFA CAMP BRANCH"
+ },
+ {
+  "code": "335",
+  "name": "SHENEN GIBE BRANCH"
+ },
+ {
+  "code": "336",
+  "name": "KELLA BRANCH"
+ },
+ {
+  "code": "337",
+  "name": "18 MAZORIA BRANCH"
+ },
+ {
+  "code": "338",
+  "name": "KOYE FECHE BRANCH"
+ },
+ {
+  "code": "339",
+  "name": "KOLLA SHELE BRANCH"
+ },
+ {
+  "code": "340",
+  "name": "SARIS ABO BRANCH"
+ },
+ {
+  "code": "341",
+  "name": "ABUWARE BRANCH"
+ },
+ {
+  "code": "342",
+  "name": "ZENEBEWORK-TABOTMADERIA"
+ },
+ {
+  "code": "343",
+  "name": "HARARHAKIM BRANCH"
+ },
+ {
+  "code": "344",
+  "name": "ADAMADEMBELA BRANCH"
+ },
+ {
+  "code": "345",
+  "name": "WASHINGTON ADEBABAY BRANCH"
+ },
+ {
+  "code": "346",
+  "name": "FIGA BRANCH"
+ },
+ {
+  "code": "347",
+  "name": "ERTU LEBU BRANCH"
+ },
+ {
+  "code": "348",
+  "name": "TEBASE BRANCH"
+ },
+ {
+  "code": "349",
+  "name": "SHASHEMENE MOBIL BRANCH"
+ },
+ {
+  "code": "350",
+  "name": "JACROS BRANCH"
+ },
+ {
+  "code": "351",
+  "name": "GELEMSO BRANCH"
+ },
+ {
+  "code": "352",
+  "name": "ARADA BRANCH"
+ },
+ {
+  "code": "353",
+  "name": "DERARO BRANCH"
+ },
+ {
+  "code": "354",
+  "name": "HAWASSA ALAMURA"
+ },
+ {
+  "code": "355",
+  "name": "ARSIROBE BRANCH"
+ },
+ {
+  "code": "356",
+  "name": "DEJEN BRANCH"
+ },
+ {
+  "code": "357",
+  "name": "MERILOKE BRANCH"
+ },
+ {
+  "code": "358",
+  "name": "SEALITE MIHRET BRANCH"
+ },
+ {
+  "code": "359",
+  "name": "LAFTOMEBRAT BRANCH"
+ },
+ {
+  "code": "360",
+  "name": "MOTTA BRANCH"
+ },
+ {
+  "code": "361",
+  "name": "DEBARK BRANCH"
+ },
+ {
+  "code": "362",
+  "name": "BALE EGZIABHER BRANCH"
+ },
+ {
+  "code": "363",
+  "name": "ADAA BRANCH"
+ },
+ {
+  "code": "364",
+  "name": "MELKA GEFERSA BRANCH"
+ },
+ {
+  "code": "365",
+  "name": "COMMERCE BRANCH"
+ },
+ {
+  "code": "366",
+  "name": "JAWI BRANCH"
+ },
+ {
+  "code": "367",
+  "name": "DANEMA BRANCH"
+ },
+ {
+  "code": "368",
+  "name": "ARADA GIORGIS BRANCH"
+ },
+ {
+  "code": "369",
+  "name": "MUDULA BRANCH"
+ },
+ {
+  "code": "370",
+  "name": "YIRGA CHEFFE BRANCH"
+ },
+ {
+  "code": "371",
+  "name": "WOLLO SEFER ADEBABAY"
+ },
+ {
+  "code": "372",
+  "name": "BULBULA BRANCH"
+ },
+ {
+  "code": "373",
+  "name": "ADOLA WOYU"
+ },
+ {
+  "code": "374",
+  "name": "GOTERA PEPSI BRANCH"
+ },
+ {
+  "code": "375",
+  "name": "Pastor Branch"
+ },
+ {
+  "code": "376",
+  "name": "ASKO BRANCH"
+ },
+ {
+  "code": "377",
+  "name": "American Gibi BRANCH"
+ },
+ {
+  "code": "378",
+  "name": "GERJI ROBA BRANCH"
+ },
+ {
+  "code": "379",
+  "name": "KILINTO BRANCH"
+ },
+ {
+  "code": "380",
+  "name": "SENGATERA BRANCH"
+ },
+ {
+  "code": "381",
+  "name": "SODO ARADA BRANCH"
+ },
+ {
+  "code": "382",
+  "name": "ADABA BRANCH"
+ },
+ {
+  "code": "383",
+  "name": "ADET BRANCH"
+ },
+ {
+  "code": "384",
+  "name": "TULEFA BRANCH"
+ },
+ {
+  "code": "385",
+  "name": "GERJI MARIAM BRANCH"
+ },
+ {
+  "code": "386",
+  "name": "HAWASSA REFERRAL BRANCH"
+ },
+ {
+  "code": "387",
+  "name": "UKE BRANCH"
+ },
+ {
+  "code": "388",
+  "name": "DANSHA BRANCH"
+ },
+ {
+  "code": "389",
+  "name": "NIGIST ELENI BRANCH"
+ },
+ {
+  "code": "390",
+  "name": "Shurmo BRANCH"
+ },
+ {
+  "code": "391",
+  "name": "FONKO BRANCH"
+ },
+ {
+  "code": "392",
+  "name": "MEKANE SELAM BRANCH"
+ },
+ {
+  "code": "393",
+  "name": "DIMA BRANCH"
+ },
+ {
+  "code": "394",
+  "name": "SEDECHA BRANCH"
+ },
+ {
+  "code": "395",
+  "name": "BEDESA BRANCH"
+ },
+ {
+  "code": "396",
+  "name": "MIZAN BRANCH"
+ },
+ {
+  "code": "397",
+  "name": "ADAMA SEKEKELO"
+ },
+ {
+  "code": "398",
+  "name": "TONA"
+ },
+ {
+  "code": "399",
+  "name": "CHACHA"
+ },
+ {
+  "code": "400",
+  "name": "ESERA"
+ },
+ {
+  "code": "401",
+  "name": "UTA WAYU BRANCH"
+ },
+ {
+  "code": "402",
+  "name": "HOSSANA ADDISU MENHARIYA"
+ },
+ {
+  "code": "403",
+  "name": "HAILE FIDA BRANCH"
+ },
+ {
+  "code": "404",
+  "name": "HASSASA BRANCH"
+ },
+ {
+  "code": "405",
+  "name": "BISHISHE BRANCH"
+ },
+ {
+  "code": "406",
+  "name": "AWURADA BRANCH"
+ },
+ {
+  "code": "407",
+  "name": "BANBASI BRANCH"
+ },
+ {
+  "code": "408",
+  "name": "ASOSSA AREB-SEFER BRANCH"
+ },
+ {
+  "code": "409",
+  "name": "Awach Branch"
+ },
+ {
+  "code": "985",
+  "name": "CENTRAL HAWASSA"
+ },
+ {
+  "code": "986",
+  "name": "NORTH HAWASSA"
+ },
+ {
+  "code": "987",
+  "name": "Wolaita District"
+ },
+ {
+  "code": "988",
+  "name": "Central Ethiopia"
+ },
+ {
+  "code": "989",
+  "name": "WEST DISTRICT"
+ },
+ {
+  "code": "990",
+  "name": "SOUTH ADDIS DISTRICT"
+ },
+ {
+  "code": "991",
+  "name": "NORTH DISTRICT"
+ },
+ {
+  "code": "992",
+  "name": "SOUTH DISTRICT"
+ },
+ {
+  "code": "993",
+  "name": "EAST DISTRICT"
+ },
+ {
+  "code": "994",
+  "name": "WEST AA DISTRICT"
+ },
+ {
+  "code": "995",
+  "name": "EAST AA DISTRICT"
+ },
+ {
+  "code": "996",
+  "name": "NORTH ADDIS DISTRICT"
+ },
+ {
+  "code": "997",
+  "name": "Wolita Sodo Issue Center"
+ },
+ {
+  "code": "998",
+  "name": "INTERNATIONAL BANKING DEPARTMENT"
+ },
+ {
+  "code": "999",
+  "name": "HEAD OFFICE"
+ }
+]
