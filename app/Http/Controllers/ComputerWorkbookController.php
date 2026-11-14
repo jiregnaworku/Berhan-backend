@@ -24,6 +24,42 @@ class ComputerWorkbookController extends Controller
         return response()->json(['workbookRows' => $query->get()]);
     }
 
+    // Read-only: every computer in the bank, with its branch and owner details.
+    // Used by the "Other ambassadors' computers" page. No write access is given here.
+    public function all(Request $request): JsonResponse
+    {
+        abort_unless(
+            in_array($request->user()?->role, ['ambassador', 'service-desk-manager'], true),
+            403,
+            'You do not have permission to view all computers.',
+        );
+
+        $rows = ComputerWorkbook::query()
+            ->with('branch')
+            ->latest()
+            ->get()
+            ->map(fn (ComputerWorkbook $row) => [
+                'id' => $row->id,
+                'branch_id' => $row->branch_id,
+                'branch_name' => $row->branch?->branch_name,
+                'branch_code' => $row->branch?->branch_code,
+                'branch_location' => $row->branch?->branch_location,
+                // The ambassador who owns the branch (falls back to who registered the row)
+                'ambassador_username' => $row->branch?->created_by ?? $row->created_by,
+                'ambassador_name' => $row->ambassador_name ?: $row->branch?->ambassador_name,
+                'ip_address' => $row->ip_address,
+                'computer_name' => $row->computer_name,
+                'computer_job' => $row->computer_job,
+                'operating_system' => $row->operating_system,
+                'status' => $row->status,
+                'network_agent' => $row->network_agent,
+                'endpoint' => $row->endpoint_protection,
+                'kaspersky_status' => $row->kaspersky_status,
+            ]);
+
+        return response()->json(['workbookRows' => $rows]);
+    }
+
     public function store(Request $request): JsonResponse
     {
         $this->ensureCanManage($request);

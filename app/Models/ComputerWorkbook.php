@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 #[Fillable([
     'branch_id',
@@ -24,6 +25,11 @@ use Illuminate\Database\Eloquent\Model;
 class ComputerWorkbook extends Model
 {
     protected $appends = ['endpoint'];
+
+    public function branch(): BelongsTo
+    {
+        return $this->belongsTo(Branch::class);
+    }
 
     public function getEndpointAttribute(): ?string
     {
