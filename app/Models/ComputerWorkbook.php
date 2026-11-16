@@ -12,7 +12,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
     'ambassador_name',
     'ip_address',
     'computer_name',
+    'computer_model',
     'computer_job',
+    'cheque_scanner',
     'operating_system',
     'managed_kasp_ip',
     'version',
@@ -25,6 +27,11 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class ComputerWorkbook extends Model
 {
     protected $appends = ['endpoint'];
+
+    protected function casts(): array
+    {
+        return ['cheque_scanner' => 'boolean'];
+    }
 
     public function branch(): BelongsTo
     {

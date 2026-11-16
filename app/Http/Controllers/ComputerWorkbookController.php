@@ -49,12 +49,15 @@ class ComputerWorkbookController extends Controller
                 'ambassador_name' => $row->ambassador_name ?: $row->branch?->ambassador_name,
                 'ip_address' => $row->ip_address,
                 'computer_name' => $row->computer_name,
+                'computer_model' => $row->computer_model,
                 'computer_job' => $row->computer_job,
+                'cheque_scanner' => (bool) $row->cheque_scanner,
                 'operating_system' => $row->operating_system,
                 'status' => $row->status,
                 'network_agent' => $row->network_agent,
                 'endpoint' => $row->endpoint_protection,
                 'kaspersky_status' => $row->kaspersky_status,
+                'remark' => $row->remark,
             ]);
 
         return response()->json(['workbookRows' => $rows]);
@@ -92,6 +95,7 @@ class ComputerWorkbookController extends Controller
 
         $data = $this->validatedData($request);
         $branch = $this->ownedBranch($request, $data['branch_id'], $request->user()->role === 'service-desk-manager');
+
         if (isset($data['endpoint'])) {
             $data['endpoint_protection'] = $data['endpoint'];
             unset($data['endpoint']);
@@ -105,38 +109,56 @@ class ComputerWorkbookController extends Controller
         return response()->json(['workbookRow' => $computerWorkbook->fresh()]);
     }
 
-    // Branch managers can update ONLY the Net Agent and Endpoint values of a
-    // computer in their own branch, and only while the ambassador has turned
-    // editing on for that branch.
+    // Branch managers can update ONLY the Endpoint Protection value
+    // of a computer in their own branch, and only while the ambassador
+    // has turned editing on for that branch.
+    //
+    // Network Agent is intentionally excluded from this update.
+    // Its existing database value will always be preserved.
     public function updateKaspersky(Request $request, ComputerWorkbook $computerWorkbook): JsonResponse
     {
         $user = $request->user();
 
-        abort_unless($user?->role === 'branch-manager', 403, 'Only branch managers can use this action.');
+        abort_unless(
+            $user?->role === 'branch-manager',
+            403,
+            'Only branch managers can use this action.'
+        );
+
         abort_unless(
             (int) $computerWorkbook->branch_id === (int) $user->branch_id,
             403,
-            'You can only update computers of your own branch.',
+            'You can only update computers of your own branch.'
         );
 
         $branch = Branch::query()->findOrFail($computerWorkbook->branch_id);
+
         abort_unless(
             $branch->manager_can_edit,
             403,
-            'Editing is not enabled for your branch. Please ask your ambassador to turn it on.',
+            'Editing is not enabled for your branch. Please ask your ambassador to turn it on.'
         );
 
         $data = $request->validate([
-            'network_agent' => ['nullable', 'string', 'max:60'],
-            'endpoint' => ['nullable', 'string', 'max:60'],
+            'endpoint' => ['sometimes', 'nullable', 'string', 'max:60'],
         ]);
 
-        $computerWorkbook->update([
-            'network_agent' => $data['network_agent'] ?? null,
-            'endpoint_protection' => $data['endpoint'] ?? null,
-        ]);
+        // Update Endpoint Protection only.
+        // Do not include network_agent here.
+        // The existing Network Agent value remains unchanged.
+        $updates = [];
 
-        return response()->json(['workbookRow' => $computerWorkbook->fresh()]);
+        if (array_key_exists('endpoint', $data)) {
+            $updates['endpoint_protection'] = $data['endpoint'];
+        }
+
+        if (!empty($updates)) {
+            $computerWorkbook->update($updates);
+        }
+
+        return response()->json([
+            'workbookRow' => $computerWorkbook->fresh()
+        ]);
     }
 
     public function destroy(Request $request, ComputerWorkbook $computerWorkbook): JsonResponse
@@ -155,7 +177,9 @@ class ComputerWorkbookController extends Controller
             'ambassador_name' => ['nullable', 'string', 'max:120'],
             'ip_address' => ['required', 'ip'],
             'computer_name' => ['nullable', 'string', 'max:120'],
-            'computer_job' => ['nullable', 'in:MTO,Normal'],
+            'computer_model' => ['nullable', 'string', 'max:100'],
+            'computer_job' => ['nullable', 'in:MTO,Normal,Opening'],
+            'cheque_scanner' => ['nullable', 'boolean'],
             'operating_system' => ['required', 'in:Windows 10,Windows 11'],
             'status' => ['required', 'in:Active,Not active'],
             'network_agent' => ['nullable', 'string', 'max:60'],
