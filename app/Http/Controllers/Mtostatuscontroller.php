@@ -9,12 +9,19 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use Illuminate\Validation\ValidationException;
 
 class MtoStatusController extends Controller
 {
     private const MTOS = ['RIA', 'Western Union', 'MoneyGram', 'Transfast', 'Dahabshiil'];
 
-    private const STATUSES = ['Working', 'Not working', 'Do not have user', 'Unknown'];
+    private const STATUSES = ['Working', 'Not working'];
+
+    // For "Not working": the kind of issue and the problems that belong to it
+    private const ISSUE_TYPES = [
+        'User Right Issue' => ["Don't have user", 'User expired'],
+        'Application Issue' => ['Not installed at all', 'Installed but not working'],
+    ];
 
     // Branches in the caller's scope + the reports of those branches.
     //  - ambassador: only the branches they own
@@ -58,8 +65,23 @@ class MtoStatusController extends Controller
         $data = $request->validate([
             'mto' => ['required', Rule::in(self::MTOS)],
             'status' => ['required', Rule::in(self::STATUSES)],
-            'remark' => ['nullable', 'string', 'max:500'],
+            'issue_type' => ['nullable', 'required_if:status,Not working', Rule::in(array_keys(self::ISSUE_TYPES))],
+            'issue_detail' => ['nullable', 'required_if:status,Not working', 'string', 'max:60'],
+            'remark' => ['required', 'string', 'max:500'],
         ]);
+
+        if ($data['status'] === 'Not working') {
+            // The chosen problem must belong to the chosen issue type
+            if (! in_array($data['issue_detail'], self::ISSUE_TYPES[$data['issue_type']], true)) {
+                throw ValidationException::withMessages([
+                    'issue_detail' => 'Please choose a problem that matches the issue type.',
+                ]);
+            }
+        } else {
+            // A working MTO has no issue to describe
+            $data['issue_type'] = null;
+            $data['issue_detail'] = null;
+        }
 
         $branch = Branch::query()->findOrFail($user->branch_id);
 
@@ -174,6 +196,8 @@ class MtoStatusController extends Controller
             'branch_id' => $row->branch_id,
             'mto' => $row->mto,
             'status' => $row->status,
+            'issue_type' => $row->issue_type,
+            'issue_detail' => $row->issue_detail,
             'remark' => $row->remark,
             'submitted_by' => $row->submitted_by,
             'review_state' => $row->review_state,

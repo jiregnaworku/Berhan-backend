@@ -9,6 +9,8 @@ use Illuminate\Database\Eloquent\Model;
     'branch_id',
     'mto',
     'status',
+    'issue_type',
+    'issue_detail',
     'remark',
     'submitted_by',
     'review_state',
